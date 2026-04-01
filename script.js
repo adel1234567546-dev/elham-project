@@ -10,7 +10,7 @@ async function getWisdom() {
     }
 
     // 2. إظهار حالة التحميل وتعطيل الزر
-    wisdomText.innerText = 'جاري استحضار الحكمة...';
+    wisdomText.innerText = 'انتظر يا الذيب ثواني...';
     submitBtn.disabled = true;
 
     try {
