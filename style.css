@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* لمنع ظهور شريط التمرير أثناء الأنميشن */
+}
+
+/* الكرت الرئيسي */
+.container {
+    background: #1e293b;
+    padding: 20px 40px 40px 40px; /* تقليل Padding العلوي لرفع كلمة إلهام */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    text-align: center;
+    width: 450px;
+    position: relative;
+    
+    /* أنميشن ظهور الكرت */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: luxuriousReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+h1 {
+    color: #fb7185;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-top: -15px; /* رفع الكلمة للأعلى بقيمة سالبة */
+    margin-bottom: 10px;
+}
+
+p {
+    color: #cbd5e1;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background: #334155;
+    border: 2px solid #475569;
+    border-radius: 12px;
+    color: white;
+    padding: 15px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    resize: none;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #fb7185;
+}
+
+button {
+    background: linear-gradient(45deg, #fb7185, #e11d48);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 900;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(251, 113, 133, 0.4);
+}
+
+/* منطقة الحكمة */
+#wisdomText {
+    margin-top: 25px;
+    color: #f3f4f6;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    min-height: 50px;
+}
+
+/* الفوتر */
+.insta-footer {
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.insta-footer a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.insta-footer a:hover {
+    color: #fb7185;
+}
+
+/* --- الأنميشن الفخم المتدرج --- */
+
+/* أنميشن ظهور العناصر الداخلية واحد تلو الآخر */
+h1, p, textarea, button, #wisdomText {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: elementFadeIn 0.8s ease-out forwards;
+}
+
+/* توقيت الظهور (Delays) لعمل تأثير التدفق */
+h1 { animation-delay: 0.4s; }
+p { animation-delay: 0.6s; }
+textarea { animation-delay: 0.8s; }
+button { animation-delay: 1s; }
+#wisdomText { animation-delay: 1.2s; }
+
+@keyframes luxuriousReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes elementFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
