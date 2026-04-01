@@ -16,7 +16,7 @@ async function getWisdom() {
     try {
         // 3. الاتصال بالباك إند (FastAPI)
         // ملاحظة: تأكد أن الرابط يطابق الذي يظهر في Terminal (127.0.0.1:8000)
-        const response = await fetch('http://127.0.0.1:8000/get-wisdom', {
+        const response = await fetch('https://your-link.onrender.com/get-wisdom', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
